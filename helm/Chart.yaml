@@ -1,0 +1,29 @@
+apiVersion: v2
+name: webapp
+description: A production-ready Helm chart for a containerised web application with Prometheus monitoring
+type: application
+version: 0.3.1
+appVersion: "1.2.0"
+keywords:
+  - web
+  - prometheus
+  - monitoring
+home: https://github.com/gunasourav33/k8s-helm-monitoring
+sources:
+  - https://github.com/gunasourav33/k8s-helm-monitoring
+maintainers:
+  - name: gunasourav33
+    email: gunasourav@gmail.com
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: HPA with memory + CPU metrics
+    - kind: changed
+      description: Security context hardening (read-only root fs)
+    - kind: fixed
+      description: PrometheusRule label alignment for kube-prometheus-stack
+dependencies:
+  - name: kube-prometheus-stack
+    version: ">=45.0.0 <60.0.0"
+    repository: https://prometheus-community.github.io/helm-charts
+    condition: prometheus.enabled
