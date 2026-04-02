@@ -1,5 +1,7 @@
 # k8s-helm-monitoring
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![Kubernetes](https://img.shields.io/badge/kubernetes-1.24+-blue.svg) ![Helm](https://img.shields.io/badge/helm-3.x-informational.svg) ![Prometheus](https://img.shields.io/badge/prometheus-grafana-orange.svg)
+
 Production-grade Kubernetes deployment using Helm with full observability — Prometheus metrics, Grafana dashboards, and alerting rules baked in.
 
 ## What's in here
